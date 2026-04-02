@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "remote" {
-    organization = "snowflakedb"
+    organization = "My_Devops_Test"
 
     workspaces {
       name = "gh-actions-demo"
