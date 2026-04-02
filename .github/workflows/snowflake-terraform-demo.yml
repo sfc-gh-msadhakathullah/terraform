@@ -9,6 +9,10 @@ jobs:
   snowflake-terraform-demo:
     name: "Snowflake Terraform Demo Job"
     runs-on: ubuntu-latest
+    env:
+      SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+      SNOWFLAKE_PRIVATE_KEY_PATH: /home/runner/.ssh/snowflake_key.p8
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v2
